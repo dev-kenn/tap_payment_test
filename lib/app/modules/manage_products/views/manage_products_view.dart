@@ -13,17 +13,14 @@ class ManageProductsView extends GetView<ManageProductsController> {
       appBar: CustomAppBar(
         title: "HAsadkfl",
         actions: [
-          ObxValue((data) => Switch(
-              value: _isLightTheme.value,
-              onChanged: (val) {
-                _isLightTheme.value = val;
-                Get.changeThemeMode(
-                  _isLightTheme.value ? ThemeMode.light : ThemeMode.dark,
-                );
-                _saveThemeStatus();
-              },
-            ),
-            false.obs,
+          CustomButton(
+            onPressed: (){
+              controller.changeTheme();
+            },
+            child: Obx(()=>Icon(
+                controller.themeMode.value == ThemeMode.light ? Icons.light_mode :
+                controller.themeMode.value == ThemeMode.dark ? Icons.dark_mode : Icons.brightness_auto
+            )),
           )
         ],
       ),

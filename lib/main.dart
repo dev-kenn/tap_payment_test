@@ -16,7 +16,7 @@ void main() {
 
   ThemeData _lightTheme = ThemeData(
       brightness: Brightness.light,
-      primaryColor: Colors.white70,
+      primaryColor: Colors.black54,
       appBarTheme: AppBarTheme(
         backgroundColor: Colors.white70,
       ),

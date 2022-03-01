@@ -27,7 +27,6 @@ class CustomAppBar extends AppBar {
         title,
         style: TextStyle(
           fontSize: fontSize,
-          color: foregroundColor ?? Colors.white,
           // fontWeight: FontWeight.bold,
         ),
         textAlign: TextAlign.left,

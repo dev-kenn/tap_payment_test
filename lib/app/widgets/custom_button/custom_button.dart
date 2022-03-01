@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 
-class custom_button extends TextButton {
+class CustomButton extends TextButton {
 
-  custom_button({required VoidCallback? onPressed, required Widget child}) : super(onPressed: onPressed, child: child);
+  CustomButton({required VoidCallback? onPressed, required Widget child}) : super(onPressed: onPressed, child: child);
 
 
 
