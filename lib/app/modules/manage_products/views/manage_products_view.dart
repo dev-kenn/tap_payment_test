@@ -25,10 +25,7 @@ class ManageProductsView extends GetView<ManageProductsController> {
         ],
       ),
       body: Center(
-        child: Text(
-          'ManageProductsView is working',
-          style: TextStyle(fontSize: 20),
-        ),
+
       ),
     );
   }

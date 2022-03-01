@@ -16,9 +16,11 @@ void main() {
 
   ThemeData _lightTheme = ThemeData(
       brightness: Brightness.light,
-      primaryColor: Colors.black54,
       appBarTheme: AppBarTheme(
         backgroundColor: Colors.white70,
+        titleTextStyle: TextStyle(
+          color: Colors.black
+        )
       ),
       buttonTheme: ButtonThemeData(
         buttonColor: Colors.blue,

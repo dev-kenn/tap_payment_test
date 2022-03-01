@@ -1,7 +1,13 @@
+import 'dart:convert';
+
 import 'package:get/get.dart';
+import '../../../services/db_services/database_operations.dart';
+import '../../../models/products_model.dart';
 
 class AddProductController extends GetxController {
-  //TODO: Implement AddProductController
+
+  final products = Products().obs;
+  final dbo = DBO();
 
   final count = 0.obs;
   @override
@@ -17,4 +23,10 @@ class AddProductController extends GetxController {
   @override
   void onClose() {}
   void increment() => count.value++;
+
+  saveProduct(){
+    Get.back(result: products.value);
+
+  }
+
 }

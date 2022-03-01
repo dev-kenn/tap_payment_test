@@ -8,12 +8,21 @@ import 'shared_preferences.dart';
 
 class DBO {
 
-  saveProduct(String value){
+
+  deleteAll() {
+    SP.delete("productList");
+  }
+
+  updateProduct(String value) {
+    SP.updateStringList(key: "productList", value: value);
+  }
+
+  addProduct(String value){
     SP.addStringList(key: "productList", value: value);
   }
 
-  deleteProduct(String key) {
-    SP.delete(key);
+  deleteProduct(String value) {
+    SP.deleteFromList(key: "productList", value: value);
   }
 
   Future<List<String>?> getProductList() async {

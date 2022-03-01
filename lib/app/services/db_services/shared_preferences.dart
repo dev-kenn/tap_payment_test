@@ -68,9 +68,25 @@ abstract class SP {
 
   }
 
+
+  static updateStringList({required String key, required String value}) {
+    List<String>? stringList = prefs.getStringList(key);
+    int index = stringList?.indexWhere((element) => element == value) ?? -1;
+    if(index > -1) {
+      stringList?[index] = value;
+    }
+    storeData(dataType: DataType.listStr, key: key, value: stringList);
+  }
+
   static addStringList({required String key, required String value}) {
     List<String>? stringList = prefs.getStringList(key);
     stringList?.add(value);
+    storeData(dataType: DataType.listStr, key: key, value: stringList);
+  }
+
+  static deleteFromList({required String key, required String value}) {
+    List<String>? stringList = prefs.getStringList(key);
+    stringList?.removeWhere((element) => element == value);
     storeData(dataType: DataType.listStr, key: key, value: stringList);
   }
 
